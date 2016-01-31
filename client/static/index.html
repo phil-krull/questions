@@ -1,0 +1,17 @@
+<html ng-app="myApp">
+<head>
+  <title>Questions and Answers</title>
+  <script type="text/javascript" src="source/angular.js"></script>
+  <script type="text/javascript" src="source/angular_routes.js"></script>
+  <script type="text/javascript" src="source/angular_cookies.js"></script>
+  <script type="text/javascript" src="javascript/main.js"></script>
+  <script type="text/javascript" src="javascript/controllers/questionsController.js"></script>
+  <script type="text/javascript" src="javascript/controllers/answersController.js"></script>
+  <script type="text/javascript" src="javascript/factories/questionsFactory.js"></script>
+  <script type="text/javascript" src="javascript/factories/answersFactory.js"></script>
+</head>
+<body>
+  <a href="#/login">Login</a> | <a href="#/questions">Questions</a> | <a href="#/addquestion">Add a Question</a> | <a href="#/logout">Logout</a>
+  <div ng-view=""></div>
+</body>
+</html>

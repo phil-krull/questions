@@ -1,0 +1,12 @@
+<div>
+  <h2></h2>
+  <h4></h4>
+  <form>
+    <label>Your Answer:</label>
+    <span ng-bind="question._id"></span>
+    <p><textarea ng-model="answersCtrl.newAnswer.answer"></textarea></p>
+    <label>Supporting details for your answer (optional)</label>
+    <p><textarea ng-model="answersCtrl.newAnswer.details"></textarea></p>
+    <button ng-click="answersCtrl.addAnswer(answersCtrl.newAnswer)">Submit</button>
+  </form>
+</div>

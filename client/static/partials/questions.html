@@ -1,0 +1,15 @@
+<div>
+  <h4>Search: <input type="text"></h4>
+  <table border="1">
+    <tr>
+      <th>Question:</th>
+      <th>Answers</th>
+      <th>Action</th>
+    </tr>
+    <tr ng-repeat="question in questionsCtrl.questions">
+      <td ng-bind="question.name"></td>
+      <td ng-bind="question.answers.length"></td>
+      <td><a href="#/showanswers/{{ question.id }}">Show</a> <a href="#/answerquestions/{{ question._id }}" ng-init="question._id">Answer</a></td>
+    </tr>
+  </table>
+</div>
