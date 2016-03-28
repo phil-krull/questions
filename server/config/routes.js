@@ -24,4 +24,8 @@ module.exports = function(app) {
     Answer.update(req, res);
   })
 
+  // app.get('/answers/:id', function(req, res) {
+  //   Answer.show(req, res);
+  // })
+
 }

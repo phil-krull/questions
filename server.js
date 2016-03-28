@@ -15,4 +15,4 @@ require('./server/config/routes.js')(app);
 
 app.listen(8282, function() {
   console.log('listening on port 8282........')
-})
+});

@@ -1,11 +1,7 @@
 <div>
-  <h2></h2>
-
-  <h4></h4>
-
-  <li>
-
-  </li>
-
-  <p>on show answers page</p>
+  <h2 ng-bind="answersCtrl.question.name"></h2>
+  <ul ng-repeat="comment in answersCtrl.question.answers">
+    <h3><span ng-bind='comment.username'></span>  says:</h3>
+    <p><span ng-bind='comment.answer'></span> <span ng-bind='comment.likes'></span> likes <button ng-click="answersCtrl.addLike(comment._id)">Like</button></p>
+  </ul>
 </div>

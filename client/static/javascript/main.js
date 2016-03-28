@@ -17,7 +17,7 @@ myApp.config(function ($routeProvider) {
       controller: 'questionsController',
       controllerAs: 'questionsCtrl'
     })
-    .when('/showanswers', {
+    .when('/showanswers/:questionId', {
       templateUrl: 'partials/showanswers.html',
       controller: 'answersController',
       controllerAs: 'answersCtrl'

@@ -13,4 +13,18 @@ myApp.controller('answersController', function(answersFactory, $routeParams, $co
       this.newAnswer = {};
   }
 
+  function showQuestion() {
+    answersFactory.show($routeParams.questionId, function(question) {
+      _this.question = question;
+    })
+  }
+
+  this.addLike = function (answerId) {
+    answersFactory.update(answerId, function(answer) {
+      showQuestion();
+    })
+  }
+
+  showQuestion();
+
 })

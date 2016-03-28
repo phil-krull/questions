@@ -5,10 +5,13 @@ var question = mongoose.model('question');
 module.exports = {
 
   show: function(req, res) {
-    question.findOne({_id: req.params.id}, function(errors, answer) {
+    question.findOne({_id: req.params.id})
+    .populate('answers')
+    .exec(function(errors, answer) {
       if(errors) {
         res.send(errors)
       } else {
+        console.log(answer)
         res.json(answer)
       }
     })
